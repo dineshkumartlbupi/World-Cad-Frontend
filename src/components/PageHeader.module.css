@@ -1,0 +1,24 @@
+.header {
+    padding: 160px 0 80px;
+    background: linear-gradient(to bottom, #0f172a, #020617);
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.header p {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+}

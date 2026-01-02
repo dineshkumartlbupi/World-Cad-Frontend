@@ -1,0 +1,59 @@
+.fullContact {
+    padding: 80px 0;
+}
+
+.mapSection {
+    padding: 80px 0;
+    background: var(--bg-card);
+}
+
+.mapPlaceholder {
+    height: 500px;
+    background: url('/images/hero.png') center/cover no-repeat;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mapOverlay {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background: var(--glass);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mapOverlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.mapOverlay p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .mapOverlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        margin: 20px;
+    }
+}

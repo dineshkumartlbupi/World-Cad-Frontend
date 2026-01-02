@@ -1,0 +1,82 @@
+.detailedGrid {
+    padding: 100px 0;
+}
+
+.serviceCards {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.serviceItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.serviceItem:nth-child(even) {
+    direction: rtl;
+}
+
+.serviceItem:nth-child(even) .textContent {
+    direction: ltr;
+    text-align: left;
+}
+
+.textContent h2 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
+
+.textContent p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.featureList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.featureList li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.featureList li span {
+    color: var(--accent);
+    font-weight: 800;
+}
+
+.visualContent {
+    position: relative;
+}
+
+.glassImg {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.glassImg img {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 992px) {
+
+    .serviceItem,
+    .serviceItem:nth-child(even) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        direction: ltr;
+    }
+}
