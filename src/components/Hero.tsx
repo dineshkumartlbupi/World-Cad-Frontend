@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
-
+// text
 const Hero = () => {
     return (
         <section id="hero" className={styles.hero}>
