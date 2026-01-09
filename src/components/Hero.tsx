@@ -9,16 +9,22 @@ const Hero = () => {
     return (
         <section id="hero" className={styles.hero}>
             <div className={styles.overlay}></div>
+
+            {/* Background Blueprint Grid - Animated via CSS */}
+            <div className={styles.gridBackground}></div>
+
             <div className={`container ${styles.content}`}>
-                <motion.h1
-                    className={`${styles.title} gradient-text`}
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    World-Class Engineering.<br />
-                    <span>Precision Defined.</span>
-                </motion.h1>
+                    <span className={styles.tagline}>Precision Engineering & Design</span>
+                    <h1 className={`${styles.title}`}>
+                        World-Class <span className="gradient-text">Engineering.</span><br />
+                        Precision <span className={styles.outlineText}>Defined.</span>
+                    </h1>
+                </motion.div>
 
                 <motion.p
                     className={styles.subtitle}
@@ -34,10 +40,11 @@ const Hero = () => {
                     className={styles.actions}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
                 >
                     <Link href="/services" className="btn btn-primary">Our Solutions</Link>
                     <Link href="/portfolio" className="btn btn-outline">View Portfolio</Link>
+                    <Link href="/contact" className="btn btn-outline">Contact Us</Link>
                 </motion.div>
             </div>
 
@@ -45,7 +52,21 @@ const Hero = () => {
             <div className={styles.blueprintDecor}>
                 <div className={styles.lineH}></div>
                 <div className={styles.lineV}></div>
+                <div className={styles.circleDecor}></div>
             </div>
+
+            {/* Scroll Indicator */}
+            <motion.div
+                className={styles.scrollIndicator}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.5, duration: 1 }}
+            >
+                <div className={styles.mouse}>
+                    <div className={styles.wheel}></div>
+                </div>
+                <span>Scroll to Explore</span>
+            </motion.div>
         </section>
     );
 };

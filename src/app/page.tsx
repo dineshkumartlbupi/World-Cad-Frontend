@@ -1,6 +1,8 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import WhyChooseUs from '@/components/WhyChooseUs';
 import Services from '@/components/Services';
+import Industries from '@/components/Industries';
 import Portfolio from '@/components/Portfolio';
 import Process from '@/components/Process';
 import Contact from '@/components/Contact';
@@ -13,9 +15,13 @@ export default function Home() {
       <Navbar />
       <Hero />
 
+      <WhyChooseUs />
+
       <SectionReveal>
         <Services />
       </SectionReveal>
+
+      <Industries />
 
       <SectionReveal>
         <Process />

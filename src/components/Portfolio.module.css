@@ -1,35 +1,109 @@
 .portfolio {
-    background: var(--bg-main);
+    background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
 }
 
 .header {
     text-align: center;
     margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.header p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+}
+
+/* Filter Tabs */
+.filterContainer {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    background: white;
+    border: 2px solid var(--border);
+    padding: 12px 32px;
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.95rem;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    box-shadow: var(--shadow-sm);
+}
+
+.filterBtn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.activeFilter {
+    color: white;
+    font-weight: 600;
+    background: var(--gradient-accent);
+    border-color: transparent;
+    box-shadow: var(--shadow-md);
+}
+
+.activeTabIndicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+/* Grid */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    min-height: 400px;
 }
 
 .item {
     position: relative;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 250, 252, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-5px);
 }
 
 .imageWrapper {
     position: relative;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
 }
 
 .imageWrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease;
 }
 
 .overlay {
@@ -38,12 +112,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(2, 6, 23, 0.9), transparent);
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            transparent 100%);
     display: flex;
     align-items: flex-end;
     padding: 30px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .item:hover .overlay {
@@ -54,11 +131,22 @@
     transform: scale(1.1);
 }
 
-.info span {
-    color: var(--accent);
-    font-size: 0.85rem;
-    font-weight: 600;
+.info {
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+
+.item:hover .info {
+    transform: translateY(0);
+}
+
+.categoryTag {
+    color: var(--accent-light);
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 8px;
     display: block;
 }
@@ -66,10 +154,37 @@
 .info h3 {
     font-size: 1.5rem;
     color: white;
+    margin-bottom: 16px;
+}
+
+.viewBtn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.viewBtn:hover {
+    background: var(--gradient-accent);
+    border-color: transparent;
+    color: white;
 }
 
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
+    }
+
+    .filterContainer {
+        gap: 8px;
+    }
+
+    .filterBtn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }

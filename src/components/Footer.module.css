@@ -1,6 +1,6 @@
 .footer {
     padding: 80px 0 40px;
-    background: #020617;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
     border-top: 1px solid var(--border);
 }
 
@@ -32,6 +32,7 @@
 .links h4 {
     margin-bottom: 24px;
     font-size: 1.1rem;
+    color: var(--text-highlight);
 }
 
 .links ul {
@@ -51,7 +52,7 @@
 
 .bottom {
     padding-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border);
     text-align: center;
 }
 
