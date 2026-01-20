@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import SectionReveal from './SectionReveal';
 import styles from './WhyChooseUs.module.css';
 
@@ -62,15 +61,13 @@ const WhyChooseUs = () => {
                 <div className={styles.grid}>
                     {benefits.map((benefit, index) => (
                         <SectionReveal key={index} delay={index * 0.05}>
-                            <motion.div
+                            <div
                                 className={styles.card}
-                                whileHover={{ y: -8, scale: 1.02 }}
-                                transition={{ duration: 0.3 }}
                             >
                                 <div className={styles.icon}>{benefit.icon}</div>
                                 <h3>{benefit.title}</h3>
                                 <p>{benefit.description}</p>
-                            </motion.div>
+                            </div>
                         </SectionReveal>
                     ))}
                 </div>

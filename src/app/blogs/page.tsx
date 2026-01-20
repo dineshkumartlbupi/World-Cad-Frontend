@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import SectionReveal from '@/components/SectionReveal';
-import { motion } from 'framer-motion';
 import styles from './Blogs.module.css';
 
 const blogPosts = [
@@ -78,10 +77,8 @@ export default function BlogsPage() {
                     <div className={styles.grid}>
                         {blogPosts.map((post, index) => (
                             <SectionReveal key={post.id} delay={index * 0.1}>
-                                <motion.article
+                                <article
                                     className={styles.blogCard}
-                                    whileHover={{ y: -8 }}
-                                    transition={{ duration: 0.3 }}
                                 >
                                     <div className={styles.imageWrapper}>
                                         <img src={post.image} alt={post.title} />
@@ -99,7 +96,7 @@ export default function BlogsPage() {
                                             Read More →
                                         </a>
                                     </div>
-                                </motion.article>
+                                </article>
                             </SectionReveal>
                         ))}
                     </div>

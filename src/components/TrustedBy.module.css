@@ -1,0 +1,55 @@
+.section {
+    background-color: var(--primary);
+    /* Uses the vibrant blue */
+    padding: 60px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.logoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 60px;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.logoPlaceholder {
+    font-size: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+    /* Simulate logo look */
+    font-family: serif;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.logoPlaceholder:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .logoGrid {
+        gap: 30px;
+    }
+
+    .logoPlaceholder {
+        font-size: 1.2rem;
+    }
+}

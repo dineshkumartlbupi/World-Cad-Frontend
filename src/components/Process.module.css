@@ -1,67 +1,140 @@
-.process {
+.section {
     padding: 100px 0;
-    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    background-color: #ffffff;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 32px;
-}
-
-.stepCard {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 250, 252, 0.98) 100%);
-    backdrop-filter: blur(10px);
-    padding: 32px 28px;
-    border-radius: 16px;
-    border: 1px solid var(--border);
+.header {
     text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    margin-bottom: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.stepCard:hover {
-    box-shadow: var(--shadow-xl);
-    transform: translateY(-5px);
-    border-color: var(--accent);
-}
-
-.stepNumber {
-    font-size: 3rem;
-    font-weight: 800;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-main);
     margin-bottom: 16px;
 }
 
-.stepCard h3 {
-    font-size: 1.35rem;
-    margin-bottom: 12px;
-    color: var(--text-highlight);
+.subheading {
+    font-size: 1.125rem;
+    color: var(--text-muted);
 }
 
-.stepCard p {
+.stepsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    position: relative;
+}
+
+.stepItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.iconWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.iconCircle {
+    width: 64px;
+    height: 64px;
+    background-color: #F0F6FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--primary);
+    z-index: 2;
+    border: 2px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.connector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #E2E8F0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.stepId {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stepTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.stepDesc {
+    font-size: 0.875rem;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .stepsContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .stepItem:nth-child(4),
+    .stepItem:nth-child(5) {
+        grid-column: span 1.5;
+    }
 }
 
 @media (max-width: 768px) {
-    .process {
-        padding: 60px 0;
-    }
-
-    .grid {
+    .stepsContainer {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 32px;
     }
 
-    .stepCard {
-        padding: 28px 24px;
+    .stepItem {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+        gap: 20px;
     }
 
-    .stepNumber {
-        font-size: 2.5rem;
+    .iconWrapper {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .connector {
+        display: none;
+    }
+
+    .content {
+        align-items: flex-start;
     }
 }

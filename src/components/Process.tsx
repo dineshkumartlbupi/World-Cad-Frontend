@@ -3,45 +3,62 @@ import styles from './Process.module.css';
 
 const steps = [
     {
-        number: '01',
-        title: 'Consultation',
-        description: 'We deep-dive into your project requirements, technical constraints, and long-term goals.'
+        id: "01",
+        title: "Send Request",
+        description: "Submit your project requirements via our dashboard or email.",
+        icon: "📤"
     },
     {
-        number: '02',
-        title: 'Strategic Drafting',
-        description: 'Our engineers create high-fidelity 2D and 3D drafts using industry-leading CAD tools.'
+        id: "02",
+        title: "CAD Drafting",
+        description: "Our experts create precision measurement reports.",
+        icon: "📐"
     },
     {
-        number: '03',
-        title: 'Technical Review',
-        description: 'Rigorous quality checks ensure 100% accuracy and compliance with global engineering standards.'
+        id: "03",
+        title: "Quality Check",
+        description: "Rigorous QA to ensure 99.9% accuracy.",
+        icon: "✅"
     },
     {
-        number: '04',
-        title: 'Final Delivery',
-        description: 'Seamless handover of all digital assets, blueprints, and BIM models for project execution.'
+        id: "04",
+        title: "Delivery",
+        description: "Receive your permit-ready files in <24 hours.",
+        icon: "🚀"
+    },
+    {
+        id: "05",
+        title: "Scale",
+        description: "Win more jobs with faster turnaround times.",
+        icon: "📈"
     }
 ];
 
 const Process = () => {
     return (
-        <section id="process" className={styles.process}>
+        <section className={styles.section}>
             <div className="container">
                 <div className={styles.header}>
-                    <h2 className="gradient-text">Our Engineering Process</h2>
-                    <p>A systematic approach to technical excellence and precision.</p>
+                    <h2 className={styles.heading}>How World Cad Design Works</h2>
+                    <p className={styles.subheading}>A seamless workflow designed for roofing and solar professionals.</p>
                 </div>
 
-                <div className={styles.grid}>
+                <div className={styles.stepsContainer}>
                     {steps.map((step, index) => (
-                        <div key={index} className={styles.stepCard}>
-                            <div className={styles.stepHeader}>
-                                <span className={styles.stepNumber}>{step.number}</span>
-                                <div className={styles.stepLine}></div>
+                        <div key={index} className={styles.stepItem}>
+                            <div className={styles.iconWrapper}>
+                                <div className={styles.iconCircle}>
+                                    {step.icon}
+                                </div>
+                                {index < steps.length - 1 && (
+                                    <div className={styles.connector} />
+                                )}
                             </div>
-                            <h3>{step.title}</h3>
-                            <p>{step.description}</p>
+                            <div className={styles.content}>
+                                <span className={styles.stepId}>Step {step.id}</span>
+                                <h3 className={styles.stepTitle}>{step.title}</h3>
+                                <p className={styles.stepDesc}>{step.description}</p>
+                            </div>
                         </div>
                     ))}
                 </div>

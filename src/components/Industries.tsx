@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import SectionReveal from './SectionReveal';
 import styles from './Industries.module.css';
 
@@ -52,17 +51,15 @@ const Industries = () => {
                 <div className={styles.grid}>
                     {industries.map((industry, index) => (
                         <SectionReveal key={index} delay={index * 0.1}>
-                            <motion.div
+                            <div
                                 className={styles.card}
-                                whileHover={{ y: -10, scale: 1.03 }}
-                                transition={{ duration: 0.3 }}
                             >
                                 <div className={styles.iconWrapper}>
                                     <span className={styles.icon}>{industry.icon}</span>
                                 </div>
                                 <h3>{industry.title}</h3>
                                 <p>{industry.description}</p>
-                            </motion.div>
+                            </div>
                         </SectionReveal>
                     ))}
                 </div>

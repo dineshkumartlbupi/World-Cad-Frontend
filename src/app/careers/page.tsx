@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import SectionReveal from '@/components/SectionReveal';
-import { motion } from 'framer-motion';
 import styles from './Careers.module.css';
 
 const jobOpenings = [
@@ -115,10 +114,8 @@ export default function CareersPage() {
                     <div className={styles.jobsList}>
                         {jobOpenings.map((job, index) => (
                             <SectionReveal key={job.id} delay={index * 0.1}>
-                                <motion.div
+                                <div
                                     className={styles.jobCard}
-                                    whileHover={{ y: -5 }}
-                                    transition={{ duration: 0.3 }}
                                 >
                                     <div className={styles.jobHeader}>
                                         <div>
@@ -135,7 +132,7 @@ export default function CareersPage() {
                                     </div>
                                     <p>{job.description}</p>
                                     <button className="btn btn-outline">Apply Now</button>
-                                </motion.div>
+                                </div>
                             </SectionReveal>
                         ))}
                     </div>

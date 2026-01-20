@@ -26,8 +26,8 @@ export default function ContactPage() {
                         <div className={styles.mapPlaceholder}>
                             <div className={styles.mapOverlay}>
                                 <h3>Our Global Headquarters</h3>
-                                <p>123 Engineering Plaza, Suite 400<br />Innovation District, Tech City</p>
-                                <div className={styles.badge}>Silicon Valley Office</div>
+                                <p>Block A, Loni Industrial Area,<br />Ghaziabad, Uttar Pradesh 201007, INDIA</p>
+                                <div className={styles.badge}>India Office</div>
                             </div>
                         </div>
                     </div>

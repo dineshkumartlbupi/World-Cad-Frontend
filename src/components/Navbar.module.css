@@ -7,9 +7,30 @@
     display: flex;
     align-items: center;
     z-index: 1000;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    transition: all 0.2s ease-in-out;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.darkHeader:not(.scrolled) .navLink {
+    color: #FFFFFF;
+}
+
+.darkHeader:not(.scrolled) .navLink:hover {
+    color: var(--accent);
+}
+
+.darkHeader:not(.scrolled) .hamburger span {
+    background: #FFFFFF;
+}
+
+.darkHeader:not(.scrolled) .logoImage {
+    filter: brightness(0) invert(1);
+}
+
+.scrolled {
+    background: #FFFFFF;
+    box-shadow: var(--shadow-sm);
     border-bottom: 1px solid var(--border-light);
 }
 
@@ -57,31 +78,33 @@
 }
 
 /* Nav Link Styling */
+/* Nav Link Styling */
 .navLink {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 500;
-    color: var(--text-muted);
-    transition: color 0.3s ease;
+    color: var(--text-main);
+    transition: color 0.2s ease;
     position: relative;
-    padding: 5px 0;
+    padding: 8px 0;
+    margin: 0 4px;
 }
 
 .navLink:hover {
-    color: var(--text-main);
+    color: var(--primary);
 }
 
 .active {
-    color: var(--accent);
+    color: var(--primary);
     font-weight: 600;
 }
 
 .activeIndicator {
     position: absolute;
-    bottom: -4px;
+    bottom: 0;
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--accent);
+    background: var(--primary);
     border-radius: 2px;
 }
 

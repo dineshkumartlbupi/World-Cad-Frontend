@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -37,8 +36,10 @@ const Navbar = () => {
         { name: 'Careers', href: '/careers' },
     ];
 
+    const isDarkHeader = ['/privacy-policy', '/terms-of-service', '/refund-policy'].includes(pathname);
+
     return (
-        <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
+        <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${isDarkHeader ? styles.darkHeader : ''}`}>
             <div className={`container ${styles.navContainer}`}>
                 <Link href="/" className={styles.logo} onClick={() => setMobileMenuOpen(false)}>
                     <img src="/images/logo.png" alt="World Cad Design LLP Logo" className={styles.logoImage} />
@@ -54,10 +55,7 @@ const Navbar = () => {
                         >
                             {link.name}
                             {pathname === link.href && (
-                                <motion.div
-                                    className={styles.activeIndicator}
-                                    layoutId="activeIndicator"
-                                />
+                                <div className={styles.activeIndicator} />
                             )}
                         </Link>
                     ))}
@@ -76,50 +74,33 @@ const Navbar = () => {
                 </button>
 
                 {/* Mobile Menu Overlay */}
-                <AnimatePresence>
-                    {mobileMenuOpen && (
-                        <motion.div
-                            className={styles.mobileMenu}
-                            initial={{ opacity: 0, x: '100%' }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: '100%' }}
-                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        >
-                            <div className={styles.mobileLinks}>
-                                {navLinks.map((link, index) => (
-                                    <motion.div
-                                        key={link.name}
-                                        initial={{ opacity: 0, x: 20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.1 + index * 0.1 }}
-                                    >
-                                        <Link
-                                            href={link.href}
-                                            className={`${styles.mobileLink} ${pathname === link.href ? styles.activeMobile : ''}`}
-                                            onClick={() => setMobileMenuOpen(false)}
-                                        >
-                                            {link.name}
-                                        </Link>
-                                    </motion.div>
-                                ))}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.4 }}
-                                >
+                {mobileMenuOpen && (
+                    <div className={styles.mobileMenu}>
+                        <div className={styles.mobileLinks}>
+                            {navLinks.map((link) => (
+                                <div key={link.name}>
                                     <Link
-                                        href="/contact"
-                                        className="btn btn-primary"
-                                        style={{ width: '100%', marginTop: '20px' }}
+                                        href={link.href}
+                                        className={`${styles.mobileLink} ${pathname === link.href ? styles.activeMobile : ''}`}
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
-                                        Contact Us
+                                        {link.name}
                                     </Link>
-                                </motion.div>
+                                </div>
+                            ))}
+                            <div>
+                                <Link
+                                    href="/contact"
+                                    className="btn btn-primary"
+                                    style={{ width: '100%', marginTop: '20px' }}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Contact Us
+                                </Link>
                             </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
+                        </div>
+                    </div>
+                )}
             </div>
         </nav>
     );

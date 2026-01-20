@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styles from './Services.module.css';
 
@@ -64,33 +63,17 @@ const Services = () => {
         <section id="services" className={styles.services}>
             <div className="container">
                 <div className={styles.header}>
-                    <motion.h2
-                        className="gradient-text"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
+                    <h2 className="gradient-text">
                         Our Specialized Services
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
-                        viewport={{ once: true }}
-                    >
+                    </h2>
+                    <p>
                         Comprehensive CAD solutions tailored to your industry needs.
-                    </motion.p>
+                    </p>
                 </div>
 
-                <motion.div
-                    className={styles.grid}
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, margin: "-100px" }}
-                >
+                <div className={styles.grid}>
                     {services.map((service, index) => (
-                        <motion.div key={index} variants={itemVariants} className={styles.card}>
+                        <div key={index} className={styles.card}>
                             <div className={styles.cardContent}>
                                 <div className={styles.iconWrapper}>
                                     {service.isImage ? (
@@ -115,9 +98,9 @@ const Services = () => {
 
                             {/* Decorative Glow */}
                             <div className={styles.glow} />
-                        </motion.div>
+                        </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

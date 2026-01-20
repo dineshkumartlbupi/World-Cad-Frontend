@@ -15,7 +15,8 @@ const Contact = () => {
                                 <span className={styles.icon}>📍</span>
                                 <div>
                                     <h4>Visit Us</h4>
-                                    <p>123 Engineering Way, Tech City, Global</p>
+                                    <h4>Visit Us</h4>
+                                    <p>Block A, Loni Industrial Area<br />Ghaziabad, Uttar Pradesh 201007<br />INDIA</p>
                                 </div>
                             </div>
                             <div className={styles.detailItem}>
@@ -47,10 +48,11 @@ const Contact = () => {
                         <div className={styles.formGroup}>
                             <label>Service Type</label>
                             <select>
-                                <option>Architectural CAD</option>
-                                <option>3D Rendering</option>
-                                <option>MEP Design</option>
-                                <option>Other</option>
+                                <option>Solar Permit Design</option>
+                                <option>3D Roof Report</option>
+                                <option>PE Stamping</option>
+                                <option>Sales Proposal</option>
+                                <option>Other Engineering Service</option>
                             </select>
                         </div>
                         <div className={styles.formGroup}>

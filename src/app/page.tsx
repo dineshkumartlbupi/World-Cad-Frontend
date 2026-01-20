@@ -1,30 +1,31 @@
-import Navbar from '@/components/Navbar';
+
 import Hero from '@/components/Hero';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import Services from '@/components/Services';
-import Industries from '@/components/Industries';
+import TrustedBy from '@/components/TrustedBy';
+import Features from '@/components/Features';
+import Testimonials from '@/components/Testimonials';
 import Portfolio from '@/components/Portfolio';
 import Process from '@/components/Process';
 import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+
 import SectionReveal from '@/components/SectionReveal';
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
+
       <Hero />
-
-      <WhyChooseUs />
-
-      <SectionReveal>
-        <Services />
-      </SectionReveal>
-
-      <Industries />
+      <TrustedBy />
 
       <SectionReveal>
         <Process />
+      </SectionReveal>
+
+      <SectionReveal>
+        <Features />
+      </SectionReveal>
+
+      <SectionReveal>
+        <Testimonials />
       </SectionReveal>
 
       <SectionReveal>
@@ -35,7 +36,7 @@ export default function Home() {
         <Contact />
       </SectionReveal>
 
-      <Footer />
+
     </main>
   );
 }
