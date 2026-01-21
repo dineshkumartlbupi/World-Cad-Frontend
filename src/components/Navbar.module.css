@@ -28,6 +28,15 @@
     filter: brightness(0) invert(1);
 }
 
+.darkHeader:not(.scrolled) :global(.btn-outline) {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.darkHeader:not(.scrolled) :global(.btn-outline):hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 .scrolled {
     background: #FFFFFF;
     box-shadow: var(--shadow-sm);

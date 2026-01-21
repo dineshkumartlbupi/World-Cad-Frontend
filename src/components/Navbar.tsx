@@ -59,7 +59,8 @@ const Navbar = () => {
                             )}
                         </Link>
                     ))}
-                    <Link href="/contact" className="btn btn-primary">Contact Us</Link>
+                    <a href="tel:+919958060424" className="btn btn-outline" style={{ marginRight: '0px', padding: '6px 12px', fontSize: '14px' }}>Call Us Now</a>
+                    <Link href="/contact" className="btn btn-primary" style={{ fontSize: '14px', padding: '8px 16px', marginRight: '0px' }}>Contact Us</Link>
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -89,10 +90,18 @@ const Navbar = () => {
                                 </div>
                             ))}
                             <div>
+                                <a
+                                    href="tel:+919958060424"
+                                    className="btn btn-outline"
+                                    style={{ width: '100%', marginTop: '20px', textAlign: 'center' }}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Call Us Now
+                                </a>
                                 <Link
                                     href="/contact"
                                     className="btn btn-primary"
-                                    style={{ width: '100%', marginTop: '20px' }}
+                                    style={{ width: '100%', marginTop: '10px' }}
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Contact Us

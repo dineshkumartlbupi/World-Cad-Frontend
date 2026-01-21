@@ -4,32 +4,8 @@ import PageHeader from '@/components/PageHeader';
 import SectionReveal from '@/components/SectionReveal';
 import styles from './ServicesPage.module.css';
 
-const detailedServices = [
-    {
-        title: 'Architectural Drafting',
-        details: 'From conceptual sketches to permit-ready construction documents. We provide detailed floor plans, elevations, and sections.',
-        features: ['2D Floor Plans', 'Elevation Drawings', 'Section Details', 'Permit Sets'],
-        image: '/images/architectural.png'
-    },
-    {
-        title: '3D BIM Modeling',
-        details: 'Intelligent 3D models that store functional and physical data. We use Revit and ArchiCAD for comprehensive BIM coordination.',
-        features: ['Quantity Takeoffs', 'Clash Detection', '4D Scheduling', 'Asset Management'],
-        image: '/images/bim.png'
-    },
-    {
-        title: 'Mechanical Design',
-        details: 'Precision engineering design for industrial parts and machinery. We handle complex assemblies and manufacturing drawings.',
-        features: ['Solid Modeling', 'Assembly Drawings', 'FEA Analysis', 'Reverse Engineering'],
-        image: '/images/mechanical.png'
-    },
-    {
-        title: 'Electrical & Plumbing',
-        details: 'Integrated MEP solutions that ensure system efficiency and building code compliance.',
-        features: ['Lighting Layouts', 'HVAC Design', 'Pipe Routing', 'Load Calculations'],
-        image: '/images/mep.png'
-    }
-];
+import { services } from '@/data/services';
+import Link from 'next/link';
 
 export default function ServicesPage() {
     return (
@@ -43,7 +19,7 @@ export default function ServicesPage() {
             <section className={styles.detailedGrid}>
                 <div className="container">
                     <div className={styles.serviceCards}>
-                        {detailedServices.map((service, index) => (
+                        {services.map((service, index) => (
                             <SectionReveal key={index}>
                                 <div className={styles.serviceItem}>
                                     <div className={styles.textContent}>
@@ -54,6 +30,9 @@ export default function ServicesPage() {
                                                 <li key={i}><span>✓</span> {feature}</li>
                                             ))}
                                         </ul>
+                                        <Link href={`/services/${service.slug}`} className="btn btn-primary" style={{ marginTop: '20px' }}>
+                                            Learn More
+                                        </Link>
                                     </div>
                                     <div className={styles.visualContent}>
                                         <div className={styles.glassImg}>

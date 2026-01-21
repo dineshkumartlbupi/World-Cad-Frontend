@@ -37,31 +37,31 @@ const Footer = () => {
                     <div className={styles.column}>
                         <h4>Services</h4>
                         <ul>
-                            <li><a href="#">Solar Permit Designs</a></li>
-                            <li><a href="#">3D Roof Reports</a></li>
-                            <li><a href="#">Proposal Drawings</a></li>
-                            <li><a href="#">PE Stamping</a></li>
-                            <li><a href="#">Sales Proposals</a></li>
+                            <li><a href="/solar">Solar Permit Designs</a></li>
+                            <li><a href="/roofing">3D Roof Reports</a></li>
+                            <li><a href="/proposal">Proposal Drawings</a></li>
+                            <li><a href="/engineering">PE Stamping</a></li>
+                            <li><a href="/sales">Sales Proposals</a></li>
                         </ul>
                     </div>
 
                     <div className={styles.column}>
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Our Process</a></li>
-                            <li><a href="#">Partners</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/careers">Careers</a></li>
+                            <li><a href="/process">Our Process</a></li>
+                            <li><a href="/partners">Partners</a></li>
                         </ul>
                     </div>
 
                     <div className={styles.column}>
                         <h4>Resources</h4>
                         <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Case Studies</a></li>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Glossary</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/case-studies">Case Studies</a></li>
+                            <li><a href="/help-center">Help Center</a></li>
+                            <li><a href="/glossary">Glossary</a></li>
                         </ul>
                     </div>
 
@@ -69,7 +69,7 @@ const Footer = () => {
                         <h4>Support</h4>
                         <ul>
                             <li><a href="/contact">Contact Support</a></li>
-                            <li><a href="#">System Status</a></li>
+                            <li><a href="/status">System Status</a></li>
                             <li><a href="/privacy-policy">Privacy Policy</a></li>
                             <li><a href="/terms-of-service">Terms of Service</a></li>
                             <li><a href="/refund-policy">Refund Policy</a></li>

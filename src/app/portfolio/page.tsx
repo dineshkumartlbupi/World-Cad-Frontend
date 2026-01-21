@@ -7,14 +7,8 @@ import PageHeader from '@/components/PageHeader';
 import SectionReveal from '@/components/SectionReveal';
 import styles from './PortfolioPage.module.css';
 
-const projects = [
-    { title: 'Dubai Sky Tower', category: 'Architecture', image: '/images/bim.png' },
-    { title: 'Jet Engine Part', category: 'Mechanical', image: '/images/mechanical.png' },
-    { title: 'Residential Villa', category: 'Residential', image: '/images/architectural.png' },
-    { title: 'Tech Hub Park', category: 'Architecture', image: '/images/hero.png' },
-    { title: 'Industrial Assembly', category: 'Mechanical', image: '/images/mep.png' },
-    { title: 'Luxury Apartment', category: 'Residential', image: '/images/architectural.png' },
-];
+import { projects } from '@/data/projects';
+import Link from 'next/link';
 
 const categories = ['All', 'Architecture', 'Mechanical', 'Residential'];
 
@@ -58,7 +52,7 @@ export default function PortfolioPage() {
                                         <div className={styles.overlay}>
                                             <span>{project.category}</span>
                                             <h3>{project.title}</h3>
-                                            <button className={styles.viewBtn}>View Case Study</button>
+                                            <Link href={`/portfolio/${project.slug}`} className={styles.viewBtn}>View Case Study</Link>
                                         </div>
                                     </div>
                                 </div>
