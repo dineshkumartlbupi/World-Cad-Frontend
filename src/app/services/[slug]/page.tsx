@@ -74,10 +74,28 @@ export default function ServiceDetailPage() {
                             </SectionReveal>
                         </div>
                     </div>
+
+
+                    {service.diagrams && service.diagrams.length > 0 && (
+                        <div className={styles.diagramsSection}>
+                            <SectionReveal>
+                                <h3 className={styles.diagramsHeader}>Process Diagrams</h3>
+                            </SectionReveal>
+                            <div className={styles.detailGallery}>
+                                {service.diagrams.map((src, index) => (
+                                    <SectionReveal key={index} delay={index * 0.1}>
+                                        <div className={styles.galleryItem}>
+                                            <img src={src} alt={`${service.title} Diagram ${index + 1}`} />
+                                        </div>
+                                    </SectionReveal>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
 
             <Footer />
-        </main>
+        </main >
     );
 }

@@ -101,3 +101,40 @@
         position: static;
     }
 }
+
+.diagramsSection {
+    margin-top: 80px;
+}
+
+.diagramsHeader {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.detailGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.galleryItem {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: white;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.galleryItem:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.galleryItem img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

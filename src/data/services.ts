@@ -7,6 +7,7 @@ export interface Service {
     image: string;
     benefits?: string[];
     process?: string[];
+    diagrams?: string[];
 }
 
 export const services: Service[] = [
@@ -61,6 +62,25 @@ export const services: Service[] = [
             'Energy Efficient Design',
             'Code Compliance Checks',
             'Coordinated Service Drawings'
+        ]
+    },
+    {
+        title: 'Solar & Storage Design',
+        slug: 'solar-storage-design',
+        details: 'Complete solar PV and battery storage design sets for residential and commercial permits.',
+        fullDescription: 'We specialize in full-service solar design, providing everything from initial sales proposals to stamped permit-ready plan sets. Our team understands NEC codes, fire setbacks, and utility requirements across various states. We optimize string sizing and inverter matching for maximum efficiency.',
+        features: ['PV Plan Sets', 'Single Line Diagrams', 'Battery Storage Design', 'Shading Analysis'],
+        image: '/images/solar-system-diagram.png',
+        benefits: [
+            'Fast AHJ Approval',
+            'NEC Code Compliant',
+            'Battery Integration (Tesla, Enphase, etc.)'
+        ],
+        diagrams: [
+            '/images/solar-system-diagram.png',
+            '/images/pv-on-grid-system.jpg',
+            '/images/net-metering-works.jpg',
+            '/images/solar-panel-diagram.png'
         ]
     }
 ];
