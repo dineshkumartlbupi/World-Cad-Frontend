@@ -1,198 +1,196 @@
 .hero {
-    position: relative;
-    min-height: 100vh;
-    padding-top: var(--header-height);
-    display: flex;
-    align-items: center;
-    background: #F0F6FF;
-    /* Very light blue background */
-    overflow: hidden;
-    /* Ensure no gap at bottom */
-    padding-bottom: 0;
-    margin-bottom: 0;
+  position: relative;
+  min-height: 100vh;
+  padding-top: var(--header-height);
+  display: flex;
+  align-items: center;
+  background: #f0f6ff;
+  /* Very light blue background */
+  overflow: hidden;
+  /* Ensure no gap at bottom */
+  /* Ensure content stays above the wave */
+  padding-bottom: 140px;
+  margin-bottom: 0;
 }
 
 .curveDivider {
-    position: absolute;
-    bottom: -1px;
-    /* overlapping slightly to prevent gaps */
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  bottom: -1px;
+  /* overlapping slightly to prevent gaps */
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .curveDivider svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 120px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 120px;
 }
 
 .curveDivider .shapeFill {
-    fill: var(--primary);
-    /* Smooth transition into Trusted components */
+  fill: var(--primary);
+  /* Smooth transition into Trusted components */
 }
 
 .heroContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
 }
 
 .content {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .imageContainer {
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .heroImage {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
 }
 
-
-
 .title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--text-main);
-    /* Should be dark slate/black */
-    margin-bottom: 24px;
-    letter-spacing: -0.02em;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-main);
+  /* Should be dark slate/black */
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
 }
 
 .title span {
-    display: block;
-    /* Break line naturally */
+  display: block;
+  /* Break line naturally */
 }
 
 .subtitle {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: var(--text-muted);
-    margin-bottom: 16px;
-    font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-weight: 400;
 }
 
 .formWrapper {
-    margin-bottom: 32px;
-    max-width: 480px;
+  margin-bottom: 32px;
+  max-width: 480px;
 }
 
 .signupForm {
-    display: flex;
-    gap: 0;
-    /* Remove gap for connected inputs */
-    margin-bottom: 12px;
+  display: flex;
+  gap: 0;
+  /* Remove gap for connected inputs */
+  margin-bottom: 12px;
 }
 
 .emailInput {
-    flex: 1;
-    padding: 16px 24px;
-    border: 1px solid #E2E8F0;
-    border-radius: 50px 0 0 50px;
-    /* Pill shape left */
-    font-size: 1rem;
-    outline: none;
-    transition: box-shadow 0.2s;
-    margin-right: -1px;
-    /* Overlap borders */
+  flex: 1;
+  padding: 16px 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 50px 0 0 50px;
+  /* Pill shape left */
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.2s;
+  margin-right: -1px;
+  /* Overlap borders */
 }
 
 .emailInput:focus {
-    box-shadow: 0 0 0 3px rgba(0, 101, 255, 0.15);
-    border-color: var(--primary);
-    z-index: 10;
-    position: relative;
+  box-shadow: 0 0 0 3px rgba(0, 101, 255, 0.15);
+  border-color: var(--primary);
+  z-index: 10;
+  position: relative;
 }
 
 .submitBtn {
-    padding: 16px 32px;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 0 50px 50px 0;
-    /* Pill shape right */
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: background-color 0.2s;
+  padding: 16px 32px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  /* Pill shape right */
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
 }
 
 .submitBtn:hover {
-    filter: brightness(110%);
+  filter: brightness(110%);
 }
 
 .formNote {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
 .ratingWrapper {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .stars {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
 }
 
 .ratingText {
-    font-size: 0.95rem;
-    color: var(--text-main);
+  font-size: 0.95rem;
+  color: var(--text-main);
 }
 
-
 @media (max-width: 960px) {
-    .heroContainer {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
+  .heroContainer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
 
-    .content {
-        margin: 0 auto;
-    }
+  .content {
+    margin: 0 auto;
+  }
 
-    .actions {
-        justify-content: center;
-    }
+  .actions {
+    justify-content: center;
+  }
 
-    .imageContainer {
-        order: -1;
-    }
+  .imageContainer {
+    order: -1;
+  }
 }
 
 @media (max-width: 480px) {
-    .signupForm {
-        flex-direction: column;
-        gap: 12px;
-    }
+  .signupForm {
+    flex-direction: column;
+    gap: 12px;
+  }
 
-    .emailInput {
-        border-radius: 50px;
-        width: 100%;
-        margin-right: 0;
-    }
+  .emailInput {
+    border-radius: 50px;
+    width: 100%;
+    margin-right: 0;
+  }
 
-    .submitBtn {
-        border-radius: 50px;
-        width: 100%;
-    }
+  .submitBtn {
+    border-radius: 50px;
+    width: 100%;
+  }
 }
