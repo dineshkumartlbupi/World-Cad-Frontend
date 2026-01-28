@@ -1,3 +1,4 @@
+
 export interface Project {
     title: string;
     slug: string;
@@ -10,7 +11,7 @@ export interface Project {
     solution: string;
     stats?: { label: string; value: string }[];
 }
-
+// test
 export const projects: Project[] = [
     {
         title: 'Dubai Sky Tower',
