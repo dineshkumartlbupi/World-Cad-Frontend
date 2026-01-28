@@ -11,61 +11,9 @@ export interface Service {
 }
 
 export const services: Service[] = [
+
     {
-        title: 'Architectural Drafting',
-        slug: 'architectural-drafting',
-        details: 'From conceptual sketches to permit-ready construction documents. We provide detailed floor plans, elevations, and sections.',
-        fullDescription: 'Our Architectural Drafting service is the backbone of successful construction projects. We bridge the gap between creative vision and technical reality. Whether you are an architect needing support for large projects or a homeowner needing permit drawings, our team delivers high-precision CAD files complying with local building codes (IBC, CBC, etc.).',
-        features: ['2D Floor Plans', 'Elevation Drawings', 'Section Details', 'Permit Sets'],
-        image: '/images/architectural.png',
-        benefits: [
-            '100% Layer Standard Compliance (AIA)',
-            'Fast Turnaround for Redlines',
-            'Schedules & Material Legends Included'
-        ],
-        process: ['Input Review', 'Preliminary Draft', 'Client Review', 'Final Construction Set']
-    },
-    {
-        title: '3D BIM Modeling',
-        slug: '3d-bim-modeling',
-        details: 'Intelligent 3D models that store functional and physical data. We use Revit and ArchiCAD for comprehensive BIM coordination.',
-        fullDescription: 'Building Information Modeling (BIM) is not just 3D modeling; it is smart construction. We create LOD 200 to LOD 500 models that serve as a database for your building. Our models are used for clash detection, quantity take-offs, and facility management.',
-        features: ['Quantity Takeoffs', 'Clash Detection', '4D Scheduling', 'Asset Management'],
-        image: '/images/bim.png',
-        benefits: [
-            'Reduce Construction Waste',
-            ' Visualize Before Building',
-            'Accurate BOM (Bill of Materials)'
-        ]
-    },
-    {
-        title: 'Mechanical Design',
-        slug: 'mechanical-design',
-        details: 'Precision engineering design for industrial parts and machinery. We handle complex assemblies and manufacturing drawings.',
-        fullDescription: 'From individual components to complex automated assemblies, our Mechanical Design services cover the full product lifecycle. We use SolidWorks and Inventor to create manufacturable 3D parts and 2D fabrication drawings with GD&T.',
-        features: ['Solid Modeling', 'Assembly Drawings', 'FEA Analysis', 'Reverse Engineering'],
-        image: '/images/mechanical.png',
-        benefits: [
-            'DFM (Design for Manufacturing) feedback',
-            'Tolerance Stack-up Analysis',
-            'STEP/IGES file formats for CNC'
-        ]
-    },
-    {
-        title: 'Electrical & Plumbing',
-        slug: 'electrical-plumbing',
-        details: 'Integrated MEP solutions that ensure system efficiency and building code compliance.',
-        fullDescription: 'A building works only as well as its systems. Our Electrical and Plumbing design services ensure that your power, lighting, water, and waste systems are efficient, compliant, and clash-free. We coordinate tightly with structural elements.',
-        features: ['Lighting Layouts', 'HVAC Design', 'Pipe Routing', 'Load Calculations'],
-        image: '/images/mep.png',
-        benefits: [
-            'Energy Efficient Design',
-            'Code Compliance Checks',
-            'Coordinated Service Drawings'
-        ]
-    },
-    {
-        title: 'Solar & Storage Design',
+        title: 'Solar Design & Engineering',
         slug: 'solar-storage-design',
         details: 'Complete solar PV and battery storage design sets for residential and commercial permits.',
         fullDescription: 'We specialize in full-service solar design, providing everything from initial sales proposals to stamped permit-ready plan sets. Our team understands NEC codes, fire setbacks, and utility requirements across various states. We optimize string sizing and inverter matching for maximum efficiency.',
@@ -82,5 +30,47 @@ export const services: Service[] = [
             '/images/net-metering-works.jpg',
             '/images/solar-panel-diagram.png'
         ]
+    },
+    {
+        title: 'EV Charging Infrastructure',
+        slug: 'ev-charging-design',
+        details: 'End-to-end electrical design and permitting for residential and commercial EV charging stations.',
+        fullDescription: 'As electric vehicle adoption grows, so does the need for rapid, compliant infrastructure. We provide full electrical load calculations, site plans, and single-line diagrams for Level 2 and DC Fast Charging stations. We ensure ADA compliance and utility coordination.',
+        features: ['Load Calculations', 'Site Plan Layouts', 'ADA Compliance', 'Single Line Diagrams'],
+        image: '/images/ev_charging_design.png',
+        benefits: [
+            'Utility Coordination Support',
+            'Future-Proof Design',
+            'Fast Permit Turnaround'
+        ],
+        process: ['Site Assessment', 'Load Analysis', 'Electrical Layout', 'Permit Application']
+    },
+    {
+        title: 'Structural Engineering',
+        slug: 'structural-engineering',
+        details: 'PE-stamped structural letters and analysis for rooftop solar and building modifications.',
+        fullDescription: 'Safety and compliance are paramount. Our licensed structural engineers provide stamped letters for all 50 states. We analyze roof load capacity, wind uplift, and snow loads to ensure your solar installation or building addition is structurally sound and code-compliant.',
+        features: ['PE Stamped Letters', 'Wind & Snow Load Analysis', 'Truss Reinforcement', 'Foundation Design'],
+        image: '/images/structural_engineering_solar.png',
+        benefits: [
+            'Licensed in All 50 States',
+            'Quick Turnaround (24-48 hrs)',
+            'Risk Mitigation'
+        ],
+        process: ['Data Collection', 'Structural Analysis', 'Reinforcement Design', 'PE Stamping']
+    },
+    {
+        title: 'Solar Sales Proposals',
+        slug: 'solar-sales-proposals',
+        details: 'Stunning, high-converting 3D solar proposals that help you close more deals.',
+        fullDescription: 'Stop using generic 2D layouts. Our premium 3D sales proposals visualize the homeowners potential savings and aesthetic impact. We combine accurate production modeling with beautiful 3D renders to create a proposal that builds trust and excitement.',
+        features: ['Photorealistic 3D Renders', 'Shading & Production Analysis', 'Financial Savings Charts', 'Custom Branding'],
+        image: '/images/sales_proposal_design.png',
+        benefits: [
+            'Higher Close Rates',
+            'Premium Brand Image',
+            'Accurate Production Estimates'
+        ],
+        process: ['Address & Bill Input', '3D Modeling', 'Financial Setup', 'Proposal Generation']
     }
 ];

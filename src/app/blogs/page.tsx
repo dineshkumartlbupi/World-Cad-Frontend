@@ -1,7 +1,7 @@
 'use client';
 
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import PageHeader from '@/components/PageHeader';
 import SectionReveal from '@/components/SectionReveal';
 import Link from 'next/link';
@@ -49,7 +49,7 @@ export default function BlogsPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }

@@ -43,7 +43,7 @@ const Hero = () => {
                     className={styles.imageContainer}
                 >
                     <img
-                        src="/images/hero.png"
+                        src="/images/hero-new.png"
                         alt="World Cad Design Engineering Display"
                         className={styles.heroImage}
                     />

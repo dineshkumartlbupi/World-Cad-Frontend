@@ -6,39 +6,39 @@ import styles from './Portfolio.module.css';
 const projects = [
     {
         id: 1,
-        title: 'Skyline Plaza',
-        category: 'Commercial', // Matches generic filter "Commercial"
-        image: '/images/hero.png'
+        title: 'Residential Solar Design',
+        category: 'Residential',
+        image: '/images/portfolio_solar_residential.png'
     },
     {
         id: 2,
-        title: 'Precision Engine Part',
-        category: 'Industrial',
-        image: '/images/mechanical.png'
+        title: 'Commercial Roof Array',
+        category: 'Commercial',
+        image: '/images/portfolio_solar_commercial.png'
     },
     {
         id: 3,
-        title: 'Eco-Friendly Residence',
-        category: 'Residential',
-        image: '/images/architectural.png'
+        title: 'Electrical CAD Blueprint',
+        category: 'Industrial',
+        image: '/images/cad_blueprint_solar.png'
     },
     {
         id: 4,
-        title: 'Smart City Infrastructure',
+        title: 'EV Infrastructure Layout',
         category: 'Civil',
-        image: '/images/hero.png'
+        image: '/images/ev_charging_design.png'
     },
     {
         id: 5,
-        title: 'Modern Office Complex',
+        title: 'Office Complex Solar Grid',
         category: 'Commercial',
-        image: '/images/bim.png'
+        image: '/images/commercial_solar_design.png'
     },
     {
         id: 6,
-        title: 'HVAC System Design',
+        title: 'PV Structural Engineering',
         category: 'Industrial',
-        image: '/images/mep.png'
+        image: '/images/structural_engineering_solar.png'
     }
 ];
 

@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams, notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import PageHeader from '@/components/PageHeader';
 import SectionReveal from '@/components/SectionReveal';
 import { services } from '@/data/services';
@@ -95,7 +95,7 @@ export default function ServiceDetailPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main >
     );
 }

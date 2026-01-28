@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams, notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import PageHeader from '@/components/PageHeader';
 import SectionReveal from '@/components/SectionReveal';
 import { projects } from '@/data/projects';
@@ -87,7 +87,7 @@ export default function ProjectDetailPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }

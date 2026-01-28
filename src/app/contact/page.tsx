@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import PageHeader from '@/components/PageHeader';
 import Contact from '@/components/Contact';
 import styles from './ContactPage.module.css';
@@ -34,7 +34,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }

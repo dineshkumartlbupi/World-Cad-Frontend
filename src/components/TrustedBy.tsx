@@ -15,12 +15,21 @@ const TrustedBy = () => {
         <section className={styles.section}>
             <div className={`container ${styles.container}`}>
                 <p className={styles.label}>Trusted by industry leaders across the globe</p>
-                <div className={styles.logoGrid}>
-                    {partners.map((partner, index) => (
-                        <div key={index} className={styles.logoPlaceholder}>
-                            {partner}
-                        </div>
-                    ))}
+                <div className={styles.scrollContainer}>
+                    <div className={styles.scrollTrack}>
+                        {/* First set of partners */}
+                        {partners.map((partner, index) => (
+                            <div key={`original-${index}`} className={styles.logoItem}>
+                                {partner}
+                            </div>
+                        ))}
+                        {/* Duplicate set for seamless scrolling */}
+                        {partners.map((partner, index) => (
+                            <div key={`duplicate-${index}`} className={styles.logoItem}>
+                                {partner}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

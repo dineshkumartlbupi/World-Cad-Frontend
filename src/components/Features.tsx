@@ -10,7 +10,7 @@ const features = [
         title: 'Solar Permit Designs',
         description: 'AHJ-ready PV permit packages. We handle everything from site plans to electrical diagrams, ensuring fast approvals.',
         points: ['PV Array Layouts', 'Single Line Diagrams', 'Datasheets & Labels'],
-        image: '/images/hero.png'
+        image: '/images/solar_design_service.png'
     },
     {
         id: 'roofing',
@@ -18,7 +18,7 @@ const features = [
         title: '3D Roof Reports',
         description: 'Precision roof reports for accurate estimation. We provide complete measurements including pitch, area, and waste factors.',
         points: ['ESX & XML Files', 'Waste Calculation', 'Pitch & Area analysis'],
-        image: '/images/architectural.png'
+        image: '/images/roofing_measurement_service.png'
     },
     {
         id: 'engineering',
@@ -26,7 +26,7 @@ const features = [
         title: 'PE Stamping Services',
         description: 'Certified Structural and Electrical engineering reviews. We provide signed and sealed letters for all 50 states.',
         points: ['Structural Analysis Letters', 'Electrical PE Stamps', 'Load Calculations'],
-        image: '/images/mep.png'
+        image: '/images/engineering_stamping_service.png'
     },
     {
         id: 'sales',
@@ -34,7 +34,7 @@ const features = [
         title: 'Sales Proposals',
         description: 'Win more deals with stunning 3D visual renderings and comprehensive solar proposals that impress homeowners.',
         points: ['Proposal Drawings', 'Shade Reports', 'Production Modeling'],
-        image: '/images/bim.png'
+        image: '/images/sales_proposal_service.png'
     }
 ];
 

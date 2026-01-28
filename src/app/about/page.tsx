@@ -1,7 +1,7 @@
 'use client';
 
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import PageHeader from '@/components/PageHeader';
 import SectionReveal from '@/components/SectionReveal';
 import styles from './About.module.css';
@@ -82,7 +82,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <Footer />
+            {/* Footer removed to avoid duplication with layout */}
         </main>
     );
 }

@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams, notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import PageHeader from '@/components/PageHeader';
 import { blogPosts } from '@/data/blogPosts';
 import styles from './BlogPost.module.css';
@@ -43,7 +43,7 @@ export default function BlogPostPage() {
                 </div>
             </article>
 
-            <Footer />
+
         </main>
     );
 }

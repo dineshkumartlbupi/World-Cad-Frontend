@@ -21,35 +21,52 @@
     text-transform: uppercase;
 }
 
-.logoGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px 60px;
+/* Scroll Container */
+.scrollContainer {
     width: 100%;
-    opacity: 0.8;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-.logoPlaceholder {
+.scrollTrack {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.scrollTrack:hover {
+    animation-play-state: paused;
+}
+
+.logoItem {
     font-size: 1.5rem;
     font-weight: 700;
     white-space: nowrap;
-    /* Simulate logo look */
     font-family: serif;
-    opacity: 0.9;
+    opacity: 0.8;
+    color: inherit;
+    padding-right: 80px; /* gap between items */
     transition: opacity 0.3s ease;
 }
 
-.logoPlaceholder:hover {
+.logoItem:hover {
     opacity: 1;
 }
 
-@media (max-width: 768px) {
-    .logoGrid {
-        gap: 30px;
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
-    .logoPlaceholder {
+@media (max-width: 768px) {
+    .logoItem {
         font-size: 1.2rem;
+        padding-right: 40px;
     }
 }

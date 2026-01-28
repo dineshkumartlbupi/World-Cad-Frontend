@@ -6,31 +6,31 @@ const steps = [
         id: "01",
         title: "Send Request",
         description: "Submit your project requirements via our dashboard or email.",
-        icon: "📤"
+        icon: "/images/icon_step_request.png"
     },
     {
         id: "02",
         title: "CAD Drafting",
         description: "Our experts create precision measurement reports.",
-        icon: "📐"
+        icon: "/images/icon_step_drafting.png"
     },
     {
         id: "03",
         title: "Quality Check",
         description: "Rigorous QA to ensure 99.9% accuracy.",
-        icon: "✅"
+        icon: "/images/icon_step_quality.png"
     },
     {
         id: "04",
         title: "Delivery",
         description: "Receive your permit-ready files in <24 hours.",
-        icon: "🚀"
+        icon: "/images/icon_step_delivery.png"
     },
     {
         id: "05",
         title: "Scale",
         description: "Win more jobs with faster turnaround times.",
-        icon: "📈"
+        icon: "/images/icon_step_scale.png"
     }
 ];
 
@@ -48,7 +48,7 @@ const Process = () => {
                         <div key={index} className={styles.stepItem}>
                             <div className={styles.iconWrapper}>
                                 <div className={styles.iconCircle}>
-                                    {step.icon}
+                                    <img src={step.icon} alt={step.title} style={{ width: '60%', height: '60%', objectFit: 'fill' }} />
                                 </div>
                                 {index < steps.length - 1 && (
                                     <div className={styles.connector} />

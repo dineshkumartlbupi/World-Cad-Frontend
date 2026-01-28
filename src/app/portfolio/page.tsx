@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import PageHeader from '@/components/PageHeader';
 import SectionReveal from '@/components/SectionReveal';
 import styles from './PortfolioPage.module.css';
@@ -62,7 +62,7 @@ export default function PortfolioPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }
