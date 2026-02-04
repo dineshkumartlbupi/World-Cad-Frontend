@@ -69,11 +69,11 @@
     width: auto;
     object-fit: contain;
     transition: height 0.3s ease;
-    filter: drop-shadow(0 0 8px rgba(45, 132, 101, 0.3));
+    filter: drop-shadow(0 0 8px rgba(0, 110, 255, 0.3));
 }
 
 .logoImage:hover {
-    filter: drop-shadow(0 0 12px rgba(45, 132, 101, 0.5));
+    filter: drop-shadow(0 0 12px rgba(0, 110, 255, 0.5));
 }
 
 .scrolled .logoImage {
