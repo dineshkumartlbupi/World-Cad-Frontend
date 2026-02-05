@@ -30,7 +30,14 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Services", href: "/services" },
+    { 
+      name: "Services", 
+      href: "/services",
+      submenu: [
+        { name: "Solar Design Services", href: "/services/solar-design-service" },
+        { name: "Roofing Design Services", href: "/services/roofing-design-service" },
+      ]
+    },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Blogs", href: "/blogs" },
     { name: "Careers", href: "/careers" },
@@ -62,6 +69,30 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className={styles.links}>
           {navLinks.map((link) => (
+            link.submenu ? (
+              <div key={link.name} className={styles.dropdown}>
+                <Link
+                  href={link.href}
+                  className={`${styles.navLink} ${pathname.startsWith(link.href) ? styles.active : ""}`}
+                >
+                  {link.name} ▾
+                  {pathname.startsWith(link.href) && (
+                    <div className={styles.activeIndicator} />
+                  )}
+                </Link>
+                <div className={styles.dropdownMenu}>
+                  {link.submenu.map((subItem) => (
+                    <Link 
+                      key={subItem.name} 
+                      href={subItem.href} 
+                      className={styles.dropdownItem}
+                    >
+                      {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
             <Link
               key={link.name}
               href={link.href}
@@ -72,6 +103,7 @@ const Navbar = () => {
                 <div className={styles.activeIndicator} />
               )}
             </Link>
+            )
           ))}
           <a
             href="tel:+919958060424"

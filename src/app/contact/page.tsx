@@ -26,7 +26,7 @@ export default function ContactPage() {
                         <div className={styles.mapPlaceholder}>
                             <div className={styles.mapOverlay}>
                                 <h3>Our Global Headquarters</h3>
-                                <p>Block A, Loni Industrial Area,<br />Ghaziabad, Uttar Pradesh 201007, INDIA</p>
+                                <p>Central Park II Rd, Vipul World,<br />Sector 48, Gurugram, Haryana 122018, INDIA</p>
                                 <div className={styles.badge}>India Office</div>
                             </div>
                         </div>

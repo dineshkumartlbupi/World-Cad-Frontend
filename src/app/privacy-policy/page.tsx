@@ -70,7 +70,7 @@ export default function PrivacyPolicy() {
                     <br /><br />
                     <strong>World Cad Design LLP</strong><br />
                     Email: support@worldcaddesign.com<br />
-                    Address: Block A, Loni Industrial Area, Ghaziabad, Uttar Pradesh 201007, INDIA
+                    Address: Central Park II Rd, Vipul World, Sector 48, Gurugram, Haryana 122018, INDIA
                 </p>
             </section>
         </LegalPageLayout>

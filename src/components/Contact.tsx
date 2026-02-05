@@ -15,8 +15,7 @@ const Contact = () => {
                                 <span className={styles.icon}>📍</span>
                                 <div>
                                     <h4>Visit Us</h4>
-                                    <h4>Visit Us</h4>
-                                    <p>Block A, Loni Industrial Area<br />Ghaziabad, Uttar Pradesh 201007<br />INDIA</p>
+                                    <p>Central Park II Rd, Vipul World,<br />Sector 48, Gurugram, Haryana 122018<br />INDIA</p>
                                 </div>
                             </div>
                             <div className={styles.detailItem}>

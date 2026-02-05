@@ -22,8 +22,8 @@ const Footer = () => {
 
                         <FooterLogo />
                         <p className={styles.address}>
-                            Block A, Loni Industrial Area,<br />
-                            Ghaziabad, Uttar Pradesh 201007<br />
+                            Central Park II Rd, Vipul World,<br />
+                            Sector 48, Gurugram, Haryana 122018<br />
                             INDIA
                         </p>
                         <div className={styles.socials}>
@@ -37,11 +37,11 @@ const Footer = () => {
                     <div className={styles.column}>
                         <h4>Services</h4>
                         <ul>
-                            <li><a href="/solar">Solar Permit Designs</a></li>
-                            <li><a href="/roofing">3D Roof Reports</a></li>
-                            <li><a href="/proposal">Proposal Drawings</a></li>
-                            <li><a href="/engineering">PE Stamping</a></li>
-                            <li><a href="/sales">Sales Proposals</a></li>
+                            <li><a href="/services/solar-design-service">Solar Permit Designs</a></li>
+                            <li><a href="/services/roofing-design-service">3D Roof Reports</a></li>
+                            <li><a href="/services/solar-sales-proposals">Solar Sales Proposals</a></li>
+                            <li><a href="/services/structural-engineering">PE Stamping</a></li>
+                            <li><a href="/services/ev-charging-design">EV Charging Design</a></li>
                         </ul>
                     </div>
 
