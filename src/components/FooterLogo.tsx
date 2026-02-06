@@ -12,7 +12,7 @@ const FooterLogo = () => {
             borderRadius: '8px'
         }}>
             <img 
-                src="/images/logo-v2.png" 
+                src="/images/logolast.png" 
                 alt="World Cad Design LLP Logo" 
                 style={{ height: '70px', width: 'auto', objectFit: 'contain' }} 
             />
