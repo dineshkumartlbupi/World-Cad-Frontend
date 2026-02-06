@@ -60,7 +60,7 @@ const Navbar = () => {
           onClick={() => setMobileMenuOpen(false)}
         >
           <img
-            src="/images/logo-v2.png"
+            src="/images/logolast.png"
             alt="World Cad Design LLP Logo"
             className={styles.logoImage}
           />
