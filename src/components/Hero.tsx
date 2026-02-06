@@ -44,7 +44,7 @@ const Hero = () => {
                 >
                     <img
                         src="/images/hero_landing.png"
-                        alt="World Cad Design Engineering Display"
+                        alt="High-end 3D solar and roofing design visualization by World CAD Design LLP"
                         className={styles.heroImage}
                     />
                 </div>
