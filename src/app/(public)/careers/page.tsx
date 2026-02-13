@@ -1,67 +1,20 @@
 'use client';
-
+import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
-
 import PageHeader from '@/components/PageHeader';
 import SectionReveal from '@/components/SectionReveal';
 import styles from './Careers.module.css';
 
-const jobOpenings = [
-    {
-        id: 1,
-        title: 'Senior CAD Designer - Architecture',
-        department: 'Design',
-        location: 'Remote / Hybrid',
-        type: 'Full-time',
-        experience: '5+ years',
-        description: 'Lead architectural CAD projects with expertise in AutoCAD, Revit, and 3D modeling.',
-    },
-    {
-        id: 2,
-        title: 'BIM Specialist',
-        department: 'Engineering',
-        location: 'On-site',
-        type: 'Full-time',
-        experience: '3+ years',
-        description: 'Develop and manage BIM models for large-scale commercial and infrastructure projects.',
-    },
-    {
-        id: 3,
-        title: 'MEP Design Engineer',
-        department: 'Engineering',
-        location: 'Remote',
-        type: 'Full-time',
-        experience: '4+ years',
-        description: 'Design mechanical, electrical, and plumbing systems for diverse building types.',
-    },
-    {
-        id: 4,
-        title: '3D Visualization Artist',
-        department: 'Design',
-        location: 'Hybrid',
-        type: 'Full-time',
-        experience: '2+ years',
-        description: 'Create photorealistic renderings and animations for architectural presentations.',
-    },
-    {
-        id: 5,
-        title: 'Structural CAD Technician',
-        department: 'Engineering',
-        location: 'On-site',
-        type: 'Contract',
-        experience: '3+ years',
-        description: 'Produce detailed structural drawings and documentation using industry-standard tools.',
-    },
-    {
-        id: 6,
-        title: 'Junior CAD Drafter',
-        department: 'Design',
-        location: 'Remote',
-        type: 'Full-time',
-        experience: '0-2 years',
-        description: 'Support the design team with 2D/3D drafting and model development.',
-    }
-];
+interface Career {
+    _id: string;
+    position: string;
+    department: string;
+    experience: string;
+    location: string;
+    description: string;
+    isActive?: boolean;
+}
+
 
 const benefits = [
     { icon: '💼', title: 'Competitive Salary', description: 'Industry-leading compensation packages' },
@@ -73,6 +26,30 @@ const benefits = [
 ];
 
 export default function CareersPage() {
+    const [careers, setCareers] = useState<Career[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchCareers = async () => {
+            try {
+                const res = await fetch('http://localhost:5000/api/careers');
+                const data = await res.json();
+
+                const activeCareers = data.filter(
+                    (job: Career) => job.isActive !== false
+                );
+
+                setCareers(activeCareers);
+            } catch (error) {
+                console.error('Failed to fetch careers', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchCareers();
+    }, []);
+
     return (
         <main>
             <Navbar />
@@ -111,21 +88,22 @@ export default function CareersPage() {
                             Open Positions
                         </h2>
                     </SectionReveal>
+                    {loading ? (
+    <p style={{ textAlign: 'center' }}>Loading positions...</p>
+) : (
                     <div className={styles.jobsList}>
-                        {jobOpenings.map((job, index) => (
-                            <SectionReveal key={job.id} delay={index * 0.1}>
+                        {careers.map((job, index) => (
+                            <SectionReveal key={job._id} delay={index * 0.1}>
                                 <div
                                     className={styles.jobCard}
                                 >
                                     <div className={styles.jobHeader}>
                                         <div>
-                                            <h3>{job.title}</h3>
+                                            <h3>{job.position}</h3>
                                             <div className={styles.jobMeta}>
                                                 <span className={styles.department}>{job.department}</span>
                                                 <span>•</span>
                                                 <span>{job.location}</span>
-                                                <span>•</span>
-                                                <span>{job.type}</span>
                                             </div>
                                         </div>
                                         <div className={styles.experience}>{job.experience}</div>
@@ -135,11 +113,9 @@ export default function CareersPage() {
                                 </div>
                             </SectionReveal>
                         ))}
-                    </div>
+                    </div>)}
                 </div>
             </section>
-
-
         </main>
     );
 }

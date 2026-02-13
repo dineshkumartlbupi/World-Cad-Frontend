@@ -75,7 +75,7 @@ export default function AboutPage() {
                             <div className={styles.missionCard}>
                                 <div className={styles.icon}>👁️</div>
                                 <h3>Our Vision</h3>
-                                <p>To be the world's most trusted partner for complex engineering design, pioneering the use of AI and metadata in CAD workflows.</p>
+                                <p>To be the world&apos;s most trusted partner for complex engineering design, pioneering the use of AI and metadata in CAD workflows.</p>
                             </div>
                         </SectionReveal>
                     </div>

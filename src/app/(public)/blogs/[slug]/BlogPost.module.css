@@ -3,8 +3,14 @@
     color: var(--text-color);
 }
 
+.blogContainer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
 .contentWrapper {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -73,6 +79,10 @@
 }
 
 @media (max-width: 768px) {
+    .blogContainer {
+        padding: 0 16px;
+    }
+
     .contentWrapper {
         padding: 20px;
     }

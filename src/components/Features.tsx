@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import styles from './Features.module.css';
+import Link from 'next/link';
 
 const features = [
     {
@@ -75,7 +76,7 @@ const Features = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <a href="/services" className={styles.learnBtn}>Learn more about {activeFeature.label} →</a>
+                            <Link href="/services" className={styles.learnBtn}>Learn more about {activeFeature.label} →</Link>
                         </div>
                         <div className={styles.imageWrapper}>
                             <div className={styles.imageCard}>

@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import "./globals.css";
-// test
+
 export const metadata: Metadata = {
-  title: "World CAD Design LLP | Precision Solar Design & Roofing CAD Services",
+  title: "World CAD Design LLP",
   description: "Excellence in solar permit designs, 3D roof reports, and CAD drafting. Fast 24h turnaround for residential and commercial solar projects. AHJ & Utility approved.",
   keywords: "solar design services, roofing measurement reports, solar permit plansets, commercial solar design, 3D roof models, CAD drafting services, solar engineering back-office",
   authors: [{ name: "World CAD Design LLP" }],
@@ -41,16 +38,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
 }
+

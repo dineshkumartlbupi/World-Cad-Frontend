@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Footer.module.css';
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa';
 import FooterLogo from './FooterLogo';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -37,42 +38,42 @@ const Footer = () => {
                     <div className={styles.column}>
                         <h4>Services</h4>
                         <ul>
-                            <li><a href="/services/solar-design-service">Solar Permit Designs</a></li>
-                            <li><a href="/services/roofing-design-service">3D Roof Reports</a></li>
-                            <li><a href="/services/solar-sales-proposals">Solar Sales Proposals</a></li>
-                            <li><a href="/services/structural-engineering">PE Stamping</a></li>
-                            <li><a href="/services/ev-charging-design">EV Charging Design</a></li>
+                            <li><Link href="/services/solar-design-service">Solar Permit Designs</Link></li>
+                            <li><Link href="/services/roofing-design-service">3D Roof Reports</Link></li>
+                            <li><Link href="/services/solar-sales-proposals">Solar Sales Proposals</Link></li>
+                            <li><Link href="/services/structural-engineering">PE Stamping</Link></li>
+                            <li><Link href="/services/ev-charging-design">EV Charging Design</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.column}>
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/careers">Careers</a></li>
-                            <li><a href="/process">Our Process</a></li>
-                            <li><a href="/partners">Partners</a></li>
+                            <li><Link href="/about">About Us</Link></li>
+                            <li><Link href="/careers">Careers</Link></li>
+                            <li><Link href="/process">Our Process</Link></li>
+                            <li><Link href="/partners">Partners</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.column}>
                         <h4>Resources</h4>
                         <ul>
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="/case-studies">Case Studies</a></li>
-                            <li><a href="/help-center">Help Center</a></li>
-                            <li><a href="/glossary">Glossary</a></li>
+                            <li><Link href="/blogs">Blog</Link></li>
+                            <li><Link href="/case-studies">Case Studies</Link></li>
+                            <li><Link href="/help-center">Help Center</Link></li>
+                            <li><Link href="/glossary">Glossary</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.column}>
                         <h4>Support</h4>
                         <ul>
-                            <li><a href="/contact">Contact Support</a></li>
-                            <li><a href="/status">System Status</a></li>
-                            <li><a href="/privacy-policy">Privacy Policy</a></li>
-                            <li><a href="/terms-of-service">Terms of Service</a></li>
-                            <li><a href="/refund-policy">Refund Policy</a></li>
+                            <li><Link href="/contact">Contact Support</Link></li>
+                            <li><Link href="/status">System Status</Link></li>
+                            <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                            <li><Link href="/terms-of-service">Terms of Service</Link></li>
+                            <li><Link href="/refund-policy">Refund Policy</Link></li>
                         </ul>
                     </div>
                 </div>

@@ -100,9 +100,7 @@ export const services: Service[] = [
                 features: ['Commercial PV System Design', 'MW Scale Plant Layouts', 'Commercial Battery Storage', 'Voltage Drop Analysis', 'Equipment Specification'],
                 image: '/images/commercial_solar_design_premium.png', // Using available image
                 process: ['Feasibility Study', 'System Layout', 'Electrical Engineering', 'Permit Packages'],
-                diagrams: [
-                     '/images/solar-panel-diagram.png'
-                ]
+                diagrams: ['/images/solar-panel-diagram.png']
             },
             {
                 title: 'Structural Engineering',
@@ -139,5 +137,32 @@ export const services: Service[] = [
         diagrams: [
            '/images/engineering_stamping_service.png'
         ]
-    }
+    },
+    {
+    title: 'Solar Sales Proposals',
+    slug: 'solar-sales-proposals',
+    details: 'Professional 3D solar proposal designs to close more deals.',
+    fullDescription: 'Create stunning photorealistic 3D renderings and professional proposals that showcase solar system benefits to homeowners. Our proposals include shading analysis, production estimates, and financial savings projections.',
+    features: ['3D Renderings', 'Shading Analysis', 'Production Modeling', 'Financial Projections'],
+    image: '/images/sales_proposal_design.png',
+    process: ['Site Data Input', '3D Modeling', 'Analysis Setup', 'Proposal Generation']
+},
+{
+    title: 'Structural Engineering',
+    slug: 'structural-engineering',
+    details: 'PE-stamped structural engineering for solar installations and building projects.',
+    fullDescription: 'Our licensed structural engineers provide professional stamps for roof load analysis, wind uplift resistance, snow load calculations, and structural reinforcement design to ensure code compliance.',
+    features: ['PE Stamped Letters', 'Load Analysis', 'Truss Design', 'Code Compliance'],
+    image: '/images/structural_engineering_solar.png',
+    process: ['Data Collection', 'Analysis', 'Design', 'Stamping']
+},
+{
+    title: 'EV Charging Design',
+    slug: 'ev-charging-design',
+    details: 'Complete electrical design for Level 2 and DC Fast Charging infrastructure.',
+    fullDescription: 'Comprehensive EV charging station design including load calculations, site plans, single-line diagrams, ADA compliance, and utility coordination for residential and commercial applications.',
+    features: ['Load Calculations', 'Site Plans', 'ADA Compliance', 'Single Line Diagrams'],
+    image: '/images/ev_charging_design.png',
+    process: ['Site Assessment', 'Load Analysis', 'Design', 'Permitting']
+}
 ];
