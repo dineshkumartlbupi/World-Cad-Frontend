@@ -29,6 +29,20 @@ export default function CareersPage() {
     const [careers, setCareers] = useState<Career[]>([]);
     const [loading, setLoading] = useState(true);
 
+    const handleMailClick = (email: string, position: string) => {
+        const subject = `Application for ${position} - WorldCAD`;
+        const body = `[Attach your resume and cover letter here.]\n\nBest regards,\n[Your Name]`;
+
+        const gmailUrl =
+            `https://mail.google.com/mail/?view=cm&fs=1` +
+            `&to=${encodeURIComponent(email)}` +
+            `&su=${encodeURIComponent(subject)}` +
+            `&body=${encodeURIComponent(body)}`;
+
+        const newWindow = window.open(gmailUrl, '_blank');
+        if (newWindow) newWindow.opener = null;
+    };
+
     useEffect(() => {
         const fetchCareers = async () => {
             try {
@@ -109,7 +123,13 @@ export default function CareersPage() {
                                         <div className={styles.experience}>{job.experience}</div>
                                     </div>
                                     <p>{job.description}</p>
-                                    <button className="btn btn-outline">Apply Now</button>
+                                    <button
+                                        type="button"
+                                        className="btn btn-outline"
+                                        onClick={() => handleMailClick('admin@gmail.com', job.position)}
+                                    >
+                                        Apply Now
+                                    </button>
                                 </div>
                             </SectionReveal>
                         ))}
