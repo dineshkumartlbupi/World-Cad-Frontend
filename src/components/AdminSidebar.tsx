@@ -39,8 +39,6 @@ export default function AdminSidebar({ onCollapse }: { onCollapse?: (collapsed: 
 
     const secondaryItems = [
         { href: '/', label: 'Live Site', icon: Globe },
-        { href: '/admin/settings', label: 'Security', icon: Shield },
-        { href: '/admin/settings', label: 'Settings', icon: Settings },
     ];
 
     return (
@@ -68,7 +66,7 @@ export default function AdminSidebar({ onCollapse }: { onCollapse?: (collapsed: 
 
             {/* Sidebar */}
             <aside className={`
-                fixed lg:sticky top-0 lg:top-4 left-0 z-40 
+                fixed lg:sticky top-0 lg:top-4 left-0 z-40
                 h-screen lg:h-[calc(100vh-2rem)]
                 bg-slate-950 text-slate-300
                 border-r lg:border border-slate-800 lg:rounded-3xl
