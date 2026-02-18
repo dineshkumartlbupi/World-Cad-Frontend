@@ -14,7 +14,7 @@ export default function StatCard({
     trendUp?: boolean
 }) {
     return (
-        <div className="relative bg-white p-6 rounded-[2rem] border border-gray-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_20px_40px_-10px_rgba(79,70,229,0.1)] transition-all duration-500 group cursor-default">
+        <div className="relative bg-white p-4 rounded-[2rem] border border-gray-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_20px_40px_-10px_rgba(79,70,229,0.1)] transition-all duration-500 group cursor-default">
             {/* Background Accent - Glow effect */}
             <div className={`absolute -right-4 -top-4 w-24 h-24 rounded-full blur-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 ${trendUp ? 'bg-indigo-500' : 'bg-rose-500'}`} />
 

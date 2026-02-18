@@ -78,22 +78,22 @@ export default function AdminEnquiryPage() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4">
-                    <div className="relative flex-1 min-w-[280px]">
+                    {/* <div className="relative flex-1 min-w-[280px]">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                         <input
                             type="text"
                             placeholder="Filter by name or email..."
                             className="w-full pl-12 pr-4 py-3 bg-white border border-slate-200 rounded-2xl text-sm focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all outline-none"
                         />
-                    </div>
-                    <button className="flex items-center gap-2 px-5 py-3 text-sm font-bold text-slate-700 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 transition-all shadow-sm">
+                    </div> */}
+                    {/* <button className="flex items-center gap-2 px-5 py-3 text-sm font-bold text-slate-700 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 transition-all shadow-sm">
                         <Filter size={16} className="text-slate-400" />
                         Sort
                     </button>
                     <button className="flex items-center gap-2 px-5 py-3 text-sm font-bold text-white bg-slate-900 rounded-2xl hover:bg-slate-800 transition-all shadow-lg shadow-slate-200">
                         <FileDown size={18} />
                         Export
-                    </button>
+                    </button> */}
                 </div>
             </div>
 
@@ -136,7 +136,7 @@ export default function AdminEnquiryPage() {
                         <thead>
                             <tr className="bg-slate-50/50 border-b border-slate-100">
                                 {['Contributor', 'Credential', 'Channel', 'Content Preview', 'Timestamp', 'Control'].map((header) => (
-                                    <th key={header} className="px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">
+                                    <th key={header} className="px-7 py-5 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">
                                         {header}
                                     </th>
                                 ))}
@@ -156,7 +156,7 @@ export default function AdminEnquiryPage() {
                             ) : (
                                 currentEnquiries.map((item) => (
                                     <tr key={item._id} className="group hover:bg-slate-50/50 transition-all duration-300">
-                                        <td className="px-8 py-6">
+                                        <td className="px-5 py-4">
                                             <div className="flex items-center gap-3">
                                                 <div className="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 font-black text-xs">
                                                     {item.name.charAt(0)}
@@ -164,21 +164,21 @@ export default function AdminEnquiryPage() {
                                                 <div className="font-black text-slate-900 tracking-tight">{item.name}</div>
                                             </div>
                                         </td>
-                                        <td className="px-8 py-6 text-sm text-slate-500 font-semibold italic">{item.email}</td>
-                                        <td className="px-8 py-6">
+                                        <td className="px-5 py-4 text-sm text-slate-500 font-semibold italic">{item.email}</td>
+                                        <td className="px-5 py-4">
                                             <span className="inline-flex items-center px-3 py-1.5 rounded-xl text-[10px] font-black bg-indigo-50 text-indigo-600 border border-indigo-100/50 uppercase tracking-widest group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
                                                 {item.serviceType}
                                             </span>
                                         </td>
-                                        <td className="px-8 py-6">
+                                        <td className="px-5 py-4">
                                             <div className="max-w-[240px] text-sm text-slate-500 font-medium leading-relaxed line-clamp-1 group-hover:line-clamp-none transition-all" title={item.projectDetails}>
                                                 {item.projectDetails}
                                             </div>
                                         </td>
-                                        <td className="px-8 py-6 text-sm text-slate-400 font-bold uppercase tracking-tighter">
+                                        <td className="px-5 py-4 text-sm text-slate-400 font-bold uppercase tracking-tighter">
                                             {new Date(item.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                                         </td>
-                                        <td className="px-8 py-6">
+                                        <td className="px-5 py-4">
                                             <button
                                                 onClick={() => handleMailClick(item.email, item.name)}
                                                 className="inline-flex items-center gap-2.5 px-5 py-2.5 text-indigo-600 bg-indigo-50 hover:bg-indigo-600 hover:text-white rounded-xl text-[11px] font-black uppercase tracking-widest shadow-sm hover:shadow-indigo-200 transition-all duration-500"
@@ -196,7 +196,7 @@ export default function AdminEnquiryPage() {
 
                 {/* Advanced Pagination */}
                 {totalPages > 1 && (
-                    <div className="px-8 py-6 border-t border-slate-50 flex items-center justify-between bg-slate-50/20 backdrop-blur-sm">
+                    <div className="px-5 py-4 border-t border-slate-50 flex items-center justify-between bg-slate-50/20 backdrop-blur-sm">
                         <div className="text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">
                             Projection <span className="text-slate-900">{startIndex + 1}</span> to <span className="text-slate-900">{Math.min(endIndex, enquiries.length)}</span> of <span className="text-slate-900">{enquiries.length}</span>
                         </div>

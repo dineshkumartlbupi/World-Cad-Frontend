@@ -20,7 +20,7 @@ export default function AdminLayout({
 
                 <AdminNavbar />
 
-                <div className="flex-1 p-6 lg:p-12 max-w-[1800px] mx-auto w-full overflow-y-auto custom-scrollbar relative z-10 no-scrollbar">
+                <div className="flex-1 p-6 lg:p-2 max-w-[1800px] mx-auto w-full overflow-y-auto custom-scrollbar relative z-10 no-scrollbar">
                     {children}
                 </div>
             </main>

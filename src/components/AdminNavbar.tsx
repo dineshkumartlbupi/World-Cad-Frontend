@@ -6,9 +6,8 @@ import {
     Briefcase,
     FileText,
     Zap,
-    Bell,
-    Search,
-    ChevronDown
+    // Bell,
+    // ChevronDown
 } from 'lucide-react';
 
 export default function AdminNavbar() {
@@ -57,13 +56,13 @@ export default function AdminNavbar() {
                 {/* Right: Actions and Profile */}
                 <div className="flex items-center gap-2 md:gap-6">
                     <div className="flex items-center gap-1 md:gap-2 pr-2 md:pr-6 border-r border-gray-100">
-                        <button className="p-2.5 rounded-xl text-gray-500 hover:bg-gray-100 hover:text-indigo-600 transition-all relative">
+                        {/* <button className="p-2.5 rounded-xl text-gray-500 hover:bg-gray-100 hover:text-indigo-600 transition-all relative">
                             <Bell className="w-5 h-5" />
                             <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-red-500 border-2 border-white rounded-full"></span>
                         </button>
                         <button className="hidden sm:flex p-2.5 rounded-xl text-gray-500 hover:bg-gray-100 hover:text-indigo-600 transition-all">
                             <Zap className="w-5 h-5" />
-                        </button>
+                        </button> */}
                     </div>
 
                     <div className="flex items-center gap-3 pl-2">
@@ -77,7 +76,7 @@ export default function AdminNavbar() {
                             <div className="hidden md:block">
                                 <div className="flex items-center gap-1">
                                     <p className="text-sm font-bold text-gray-900 leading-none">Admin</p>
-                                    <ChevronDown className="w-3.5 h-3.5 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                                    {/* <ChevronDown className="w-3.5 h-3.5 text-gray-400 group-hover:text-gray-600 transition-colors" /> */}
                                 </div>
                                 <p className="text-[10px] uppercase font-bold text-indigo-500 tracking-wider mt-1">Super User</p>
                             </div>
