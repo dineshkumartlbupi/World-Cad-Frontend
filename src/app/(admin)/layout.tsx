@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import "./admin/admin.css";
 
 export default function AdminRootLayout({
@@ -5,6 +9,7 @@ export default function AdminRootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    
     return (
         <div className="admin-root selection:bg-indigo-100 selection:text-indigo-900">
             {children}

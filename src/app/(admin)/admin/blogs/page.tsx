@@ -1,7 +1,7 @@
 'use client';
 import AdminEditor from '@/components/AdminEditor';
 import { useEffect, useState } from 'react';
-import { FileText, Plus, X, Pencil, Trash, Eye, EyeOff, Tag, Calendar, Image as ImageIcon, Link as LinkIcon, MessageSquare } from 'lucide-react';
+import { FileText, Plus, X, Pencil, Trash, Tag, Calendar, Image as ImageIcon, Link as LinkIcon, MessageSquare } from 'lucide-react';
 
 interface Blog {
   _id: string;
@@ -278,13 +278,13 @@ export default function AdminBlogsPage() {
               </div>
 
               <div className="flex items-center gap-2 self-end md:self-center">
-                <button
+                {/* <button
                   onClick={() => handleToggle(blog._id)}
                   className={`p-2 rounded-lg transition-all ${blog.isActive ? 'text-gray-400 hover:text-gray-600' : 'text-primary hover:bg-primary/5'}`}
                   title={blog.isActive ? 'Hide' : 'Publish'}
                 >
                   {blog.isActive ? <EyeOff size={18} /> : <Eye size={18} />}
-                </button>
+                </button> */}
                 <button
                   onClick={() => {
                     setFormData({

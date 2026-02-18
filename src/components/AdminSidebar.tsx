@@ -11,9 +11,7 @@ import {
     ChevronLeft,
     Menu,
     X,
-    Settings,
-    Shield,
-    Globe
+    // Globe
 } from 'lucide-react';
 
 export default function AdminSidebar({ onCollapse }: { onCollapse?: (collapsed: boolean) => void }) {
@@ -37,9 +35,18 @@ export default function AdminSidebar({ onCollapse }: { onCollapse?: (collapsed: 
         { href: '/admin/blogs', label: 'Blogs', icon: FileText },
     ];
 
-    const secondaryItems = [
-        { href: '/', label: 'Live Site', icon: Globe },
-    ];
+    // const secondaryItems = [
+    //     { href: '/', label: 'Live Site', icon: Globe },
+    // ];
+
+    const handleLogout = () => {
+        // Clear auth data
+        localStorage.removeItem('adminToken');
+        document.cookie = "adminToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; samesite=lax";
+
+        // Redirect and refresh to update middleware state
+        window.location.href = '/login';
+    };
 
     return (
         <>
@@ -140,7 +147,7 @@ export default function AdminSidebar({ onCollapse }: { onCollapse?: (collapsed: 
                             {isActive(item.href) && (
                                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-transparent rounded-2xl pointer-events-none" />
                             )}
-                            
+
                             {isActive(item.href) && !isCollapsed && (
                                 <div className="absolute left-0 w-1 h-6 bg-indigo-500 rounded-r-full" />
                             )}
@@ -150,7 +157,7 @@ export default function AdminSidebar({ onCollapse }: { onCollapse?: (collapsed: 
                     <div className={`mt-8 mb-4 px-4 text-[11px] font-bold text-slate-500 uppercase tracking-[0.2em] transition-opacity duration-300 ${isCollapsed ? 'opacity-0' : 'opacity-100'}`}>
                         System
                     </div>
-                    {secondaryItems.map((item) => (
+                    {/* {secondaryItems.map((item) => (
                         <Link
                             key={item.label}
                             href={item.href}
@@ -163,7 +170,38 @@ export default function AdminSidebar({ onCollapse }: { onCollapse?: (collapsed: 
                             <item.icon className="w-5 h-5 shrink-0" />
                             {!isCollapsed && <span className="text-sm font-medium">{item.label}</span>}
                         </Link>
-                    ))}
+                    ))} */}
+
+                    <button
+                        onClick={handleLogout}
+                        className={`
+                            w-full flex items-center gap-3 px-5 py-4 mt-4 rounded-2xl transition-all duration-300 group
+                            text-red-400 hover:bg-red-500/10 hover:text-red-500 border border-transparent
+                            ${isCollapsed ? 'justify-center' : ''}
+                        `}
+                        title={isCollapsed ? "Log Out" : ""}
+                    >
+                        <span className="relative z-10 group-hover:scale-110 transition-transform">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            >
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                                <polyline points="16 17 21 12 16 7" />
+                                <line x1="21" y1="12" x2="9" y2="12" />
+                            </svg>
+                        </span>
+                        {!isCollapsed && (
+                            <span className="font-semibold text-[15px] tracking-wide relative z-10">Log Out</span>
+                        )}
+                    </button>
                 </nav>
 
                 {/* Sidebar Footer - Premium Profile */}
@@ -171,15 +209,15 @@ export default function AdminSidebar({ onCollapse }: { onCollapse?: (collapsed: 
                     <div className="absolute inset-x-4 top-0 h-px bg-slate-800" />
                     <div className={`flex items-center gap-4 p-3 rounded-2xl transition-all duration-300 hover:bg-slate-900 cursor-pointer ${isCollapsed ? 'justify-center' : ''}`}>
                         <div className="relative shrink-0">
-                            <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white text-sm font-black shadow-lg">
+                            {/* <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white text-sm font-black shadow-lg">
                                 AD
-                            </div>
+                            </div> */}
                             <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-slate-950 rounded-full" />
                         </div>
                         {!isCollapsed && (
                             <div className="overflow-hidden">
-                                <p className="text-sm font-bold text-white truncate">Administrator</p>
-                                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Super User</p>
+                                <p className="text-sm font-bold text-white truncate">Core Operator</p>
+                                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Active Session</p>
                             </div>
                         )}
                     </div>
